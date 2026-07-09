@@ -61,9 +61,9 @@ export default function Differentials() {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="p-8 rounded-xl bg-brand-graphite/60 border border-brand-gray-dark/50 hover:border-brand-aqua/40 transition-all duration-300 group"
+              className="p-8 rounded-xl bg-brand-graphite/60 border border-brand-gray-dark/50 hover:border-brand-aqua/40 transition-all duration-300 group safari-anim-fix"
             >
               {/* Icon Container with subtle glow */}
               <div className="w-12 h-12 rounded-lg bg-brand-aqua/5 border border-brand-aqua/10 flex items-center justify-center mb-6 group-hover:bg-brand-aqua/10 group-hover:border-brand-aqua/30 transition-colors duration-300">

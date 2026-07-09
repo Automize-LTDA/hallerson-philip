@@ -92,7 +92,7 @@ export default function Results() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.333%-22px)] snap-start bg-brand-graphite rounded-xl overflow-hidden border border-brand-aqua/20 hover:border-brand-aqua/60 shadow-[0_15px_30px_rgba(0,0,0,0.5)] transition-all duration-300 group flex flex-col h-[540px]"
+              className="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.333%-22px)] snap-start bg-brand-graphite rounded-xl overflow-hidden border border-brand-aqua/20 hover:border-brand-aqua/60 shadow-[0_15px_30px_rgba(0,0,0,0.5)] transition-all duration-300 group flex flex-col h-[540px] safari-anim-fix"
             >
               {/* Photo Area */}
               <div className="relative h-72 overflow-hidden bg-brand-black flex-shrink-0">

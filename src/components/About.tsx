@@ -39,9 +39,9 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-5 relative"
+            className="lg:col-span-5 relative safari-anim-fix"
           >
             {/* Background glowing frame */}
             <div className="absolute -inset-4 rounded-2xl border border-brand-aqua/20 scale-95 opacity-80 pointer-events-none"></div>

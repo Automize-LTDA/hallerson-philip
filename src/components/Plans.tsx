@@ -76,13 +76,13 @@ export default function Plans() {
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className={`relative rounded-2xl bg-brand-graphite p-8 flex flex-col justify-between border ${
                 plan.recommended
                   ? 'border-brand-aqua border-glow-aqua lg:-translate-y-4 lg:shadow-[0_15px_40px_rgba(0,240,255,0.15)]'
                   : 'border-brand-gray-dark/70 hover:border-brand-aqua/30 shadow-[0_10px_25px_rgba(0,0,0,0.4)]'
-              } transition-all duration-300 group`}
+              } transition-all duration-300 group safari-anim-fix`}
             >
               {/* Highlight Ribbon for Recommended */}
               {plan.recommended && (

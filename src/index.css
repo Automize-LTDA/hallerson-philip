@@ -70,3 +70,15 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Prevent Safari / iOS WebKit rendering flickers during scroll transitions */
+.safari-anim-fix,
+[class*="transition-"],
+.motion-div {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+

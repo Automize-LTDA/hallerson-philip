@@ -50,10 +50,10 @@ export default function Method() {
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
               whileHover={{ y: -8, transition: { duration: 0.2 } }}
-              className="relative p-8 rounded-xl bg-brand-graphite border border-brand-gray-dark/60 transition-all duration-300 hover:border-brand-aqua/50 hover:shadow-[0_10px_30px_rgba(0,240,255,0.15)] group overflow-hidden"
+              className="relative p-8 rounded-xl bg-brand-graphite border border-brand-gray-dark/60 transition-all duration-300 hover:border-brand-aqua/50 hover:shadow-[0_10px_30px_rgba(0,240,255,0.15)] group overflow-hidden safari-anim-fix"
             >
               {/* Background Glow on Hover */}
               <div className="absolute inset-0 bg-gradient-to-t from-brand-aqua/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
