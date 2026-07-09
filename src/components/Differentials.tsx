@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Sparkles, Eye, Trophy, Sliders, Activity, Flame } from 'lucide-react';
 
 export default function Differentials() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
   const diffs = [
     {
       icon: <Sparkles className="text-brand-aqua" size={24} />,
@@ -59,8 +60,8 @@ export default function Differentials() {
           {diffs.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={isMobile ? false : { opacity: 0, y: 20 }}
+              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="p-8 rounded-xl bg-brand-graphite/60 border border-brand-gray-dark/50 hover:border-brand-aqua/40 transition-all duration-300 group safari-anim-fix"

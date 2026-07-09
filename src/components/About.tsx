@@ -4,6 +4,7 @@ import { Target, User, TrendingUp, Activity } from 'lucide-react';
 import personalProfile from '../assets/personal_profile.jpg';
 
 export default function About() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
   const indicators = [
     {
       icon: <User className="text-brand-aqua" size={24} />,
@@ -37,8 +38,8 @@ export default function About() {
           
           {/* Visual Column (Image with Neon Details) */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={isMobile ? false : { opacity: 0, x: -50 }}
+            whileInView={isMobile ? undefined : { opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="lg:col-span-5 relative safari-anim-fix"
@@ -65,8 +66,8 @@ export default function About() {
           {/* Content Column */}
           <div className="lg:col-span-7 flex flex-col justify-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={isMobile ? false : { opacity: 0, y: 20 }}
+              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
@@ -89,8 +90,8 @@ export default function About() {
               {indicators.map((item, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={isMobile ? false : { opacity: 0, y: 15 }}
+                  whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex gap-4 p-4 rounded-xl bg-brand-graphite/40 border border-brand-gray-dark/50 hover:border-brand-aqua/30 transition-all duration-300 group"

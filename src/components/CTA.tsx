@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function CTA() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
   const whatsappLink = "https://wa.me/558189812396?text=Ol%C3%A1%20Hallerson%2C%20conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20acompanhamento%20personalizado.";
 
   return (
@@ -19,8 +20,8 @@ export default function CTA() {
         
         {/* Animated tag */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={isMobile ? false : { opacity: 0, scale: 0.9 }}
+          whileInView={isMobile ? undefined : { opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="mb-6"
@@ -32,8 +33,8 @@ export default function CTA() {
 
         {/* Title */}
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
+          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-display font-black text-2xl md:text-4xl lg:text-5xl tracking-tight text-white uppercase mb-6 leading-tight"
@@ -46,8 +47,8 @@ export default function CTA() {
 
         {/* Description */}
         <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={isMobile ? false : { opacity: 0 }}
+          whileInView={isMobile ? undefined : { opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-xl text-brand-gray-light text-sm md:text-base leading-relaxed mb-10"
@@ -57,8 +58,8 @@ export default function CTA() {
 
         {/* Large Button */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
+          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
           whileHover={{ scale: 1.02 }}

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import heroBg from '../assets/hero_bg.jpg';
 
 export default function Hero() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
   return (
     <section
       id="inicio"
@@ -27,8 +28,8 @@ export default function Hero() {
 
         {/* Main Title */}
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={isMobile ? false : { opacity: 0, y: 30 }}
+          animate={isMobile ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="font-display font-extrabold text-4xl md:text-6xl lg:text-7xl tracking-tight text-white mb-6 uppercase"
         >
@@ -40,8 +41,8 @@ export default function Hero() {
 
         {/* Description */}
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={isMobile ? false : { opacity: 0 }}
+          animate={isMobile ? undefined : { opacity: 1 }}
           transition={{ duration: 1, delay: 0.7 }}
           className="max-w-xl text-sm md:text-base lg:text-lg text-brand-gray-light font-normal leading-relaxed mb-10"
         >
@@ -50,8 +51,8 @@ export default function Hero() {
 
         {/* Professional ID Subtext */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={isMobile ? false : { opacity: 0 }}
+          animate={isMobile ? undefined : { opacity: 1 }}
           transition={{ duration: 1, delay: 0.9 }}
           className="mb-8 flex flex-col items-center"
         >
@@ -65,8 +66,8 @@ export default function Hero() {
 
         {/* Actions CTA Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
+          animate={isMobile ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.1 }}
           className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
         >

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function Method() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
   const stages = [
     {
       num: '01',
@@ -48,8 +49,8 @@ export default function Method() {
           {stages.map((stage, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={isMobile ? false : { opacity: 0, y: 30 }}
+              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
               whileHover={{ y: -8, transition: { duration: 0.2 } }}

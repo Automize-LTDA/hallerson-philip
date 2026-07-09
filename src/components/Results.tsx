@@ -5,6 +5,7 @@ import results1 from '../assets/results_1.jpg';
 import results2 from '../assets/results_2.jpg';
 
 export default function Results() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const cases = [
@@ -88,8 +89,8 @@ export default function Results() {
           {cases.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={isMobile ? false : { opacity: 0, scale: 0.95 }}
+              whileInView={isMobile ? undefined : { opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.333%-22px)] snap-start bg-brand-graphite rounded-xl overflow-hidden border border-brand-aqua/20 hover:border-brand-aqua/60 shadow-[0_15px_30px_rgba(0,0,0,0.5)] transition-all duration-300 group flex flex-col h-[540px] safari-anim-fix"

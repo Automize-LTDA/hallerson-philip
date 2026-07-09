@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Objectives() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
   const [selectedObjective, setSelectedObjective] = useState<string | null>(null);
 
   const objectives = [
@@ -62,8 +63,8 @@ export default function Objectives() {
           {objectives.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={isMobile ? false : { opacity: 0, y: 30 }}
+              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               onClick={() => setSelectedObjective(item.title)}

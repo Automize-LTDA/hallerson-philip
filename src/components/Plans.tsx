@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Check, Flame, Zap, Award } from 'lucide-react';
 
 export default function Plans() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
   const plans = [
     {
       name: 'Start',
@@ -74,8 +75,8 @@ export default function Plans() {
           {plans.map((plan, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={isMobile ? false : { opacity: 0, y: 30 }}
+              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className={`relative rounded-2xl bg-brand-graphite p-8 flex flex-col justify-between border ${
