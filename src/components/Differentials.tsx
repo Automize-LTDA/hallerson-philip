@@ -60,10 +60,10 @@ export default function Differentials() {
           {diffs.map((item, index) => (
             <motion.div
               key={index}
-              initial={isMobile ? false : { opacity: 0, y: 20 }}
-              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial={{ opacity: 0.01, y: isMobile ? 15 : 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "50px" }}
+              transition={{ duration: 0.5, delay: isMobile ? 0 : index * 0.1 }}
               className="p-8 rounded-xl bg-brand-graphite/60 border border-brand-gray-dark/50 hover:border-brand-aqua/40 transition-all duration-300 group safari-anim-fix"
             >
               {/* Icon Container with subtle glow */}

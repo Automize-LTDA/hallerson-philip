@@ -63,10 +63,10 @@ export default function Objectives() {
           {objectives.map((item, index) => (
             <motion.div
               key={index}
-              initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0.01, y: isMobile ? 15 : 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "50px" }}
+              transition={{ duration: 0.6, delay: isMobile ? 0 : index * 0.1 }}
               onClick={() => setSelectedObjective(item.title)}
               className="relative h-80 rounded-xl overflow-hidden group cursor-pointer border border-brand-gray-dark/40 shadow-2xl safari-anim-fix"
             >

@@ -20,10 +20,10 @@ export default function CTA() {
         
         {/* Animated tag */}
         <motion.div
-          initial={isMobile ? false : { opacity: 0, scale: 0.9 }}
-          whileInView={isMobile ? undefined : { opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0.01, scale: isMobile ? 0.95 : 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "50px" }}
+          transition={{ duration: isMobile ? 0.3 : 0.5 }}
           className="mb-6"
         >
           <span className="text-xs uppercase tracking-[0.3em] font-extrabold text-brand-aqua border border-brand-aqua/30 bg-brand-aqua/5 px-4 py-1.5 rounded-full">
@@ -33,10 +33,10 @@ export default function CTA() {
 
         {/* Title */}
         <motion.h2
-          initial={isMobile ? false : { opacity: 0, y: 20 }}
-          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          initial={{ opacity: 0.01, y: isMobile ? 15 : 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "50px" }}
+          transition={{ duration: isMobile ? 0.4 : 0.6, delay: isMobile ? 0 : 0.1 }}
           className="font-display font-black text-2xl md:text-4xl lg:text-5xl tracking-tight text-white uppercase mb-6 leading-tight"
         >
           Seu Próximo Nível <br />
@@ -47,10 +47,10 @@ export default function CTA() {
 
         {/* Description */}
         <motion.p
-          initial={isMobile ? false : { opacity: 0 }}
-          whileInView={isMobile ? undefined : { opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0.01 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "50px" }}
+          transition={{ duration: isMobile ? 0.5 : 0.8, delay: isMobile ? 0 : 0.2 }}
           className="max-w-xl text-brand-gray-light text-sm md:text-base leading-relaxed mb-10"
         >
           Pare de adiar seus objetivos. Comece uma estratégia de treinamento criada para transformar sua performance e seus resultados.
@@ -58,10 +58,10 @@ export default function CTA() {
 
         {/* Large Button */}
         <motion.div
-          initial={isMobile ? false : { opacity: 0, y: 20 }}
-          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial={{ opacity: 0.01, y: isMobile ? 15 : 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "50px" }}
+          transition={{ duration: isMobile ? 0.4 : 0.6, delay: isMobile ? 0 : 0.3 }}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >

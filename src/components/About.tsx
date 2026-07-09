@@ -38,10 +38,10 @@ export default function About() {
           
           {/* Visual Column (Image with Neon Details) */}
           <motion.div
-            initial={isMobile ? false : { opacity: 0, x: -50 }}
-            whileInView={isMobile ? undefined : { opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0.01, x: isMobile ? -20 : -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "50px" }}
+            transition={{ duration: isMobile ? 0.5 : 0.8 }}
             className="lg:col-span-5 relative safari-anim-fix"
           >
             {/* Background glowing frame */}
@@ -66,9 +66,9 @@ export default function About() {
           {/* Content Column */}
           <div className="lg:col-span-7 flex flex-col justify-center">
             <motion.div
-              initial={isMobile ? false : { opacity: 0, y: 20 }}
-              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0.01, y: isMobile ? 15 : 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "50px" }}
               transition={{ duration: 0.6 }}
             >
               <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-aqua mb-3 block">
@@ -90,10 +90,10 @@ export default function About() {
               {indicators.map((item, index) => (
                 <motion.div
                   key={index}
-                  initial={isMobile ? false : { opacity: 0, y: 15 }}
-                  whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacity: 0.01, y: isMobile ? 15 : 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "50px" }}
+                  transition={{ duration: 0.5, delay: isMobile ? 0 : index * 0.1 }}
                   className="flex gap-4 p-4 rounded-xl bg-brand-graphite/40 border border-brand-gray-dark/50 hover:border-brand-aqua/30 transition-all duration-300 group"
                 >
                   <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-brand-aqua/5 border border-brand-aqua/10 flex items-center justify-center group-hover:bg-brand-aqua/10 group-hover:border-brand-aqua/30 transition-colors duration-300">

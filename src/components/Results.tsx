@@ -89,10 +89,10 @@ export default function Results() {
           {cases.map((item, index) => (
             <motion.div
               key={index}
-              initial={isMobile ? false : { opacity: 0, scale: 0.95 }}
-              whileInView={isMobile ? undefined : { opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0.01, scale: isMobile ? 0.98 : 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "50px" }}
+              transition={{ duration: 0.6, delay: isMobile ? 0 : index * 0.1 }}
               className="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.333%-22px)] snap-start bg-brand-graphite rounded-xl overflow-hidden border border-brand-aqua/20 hover:border-brand-aqua/60 shadow-[0_15px_30px_rgba(0,0,0,0.5)] transition-all duration-300 group flex flex-col h-[540px] safari-anim-fix"
             >
               {/* Photo Area */}

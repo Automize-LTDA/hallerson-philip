@@ -75,10 +75,10 @@ export default function Plans() {
           {plans.map((plan, index) => (
             <motion.div
               key={index}
-              initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
+              initial={{ opacity: 0.01, y: isMobile ? 15 : 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "50px" }}
+              transition={{ duration: 0.6, delay: isMobile ? 0 : index * 0.15 }}
               className={`relative rounded-2xl bg-brand-graphite p-8 flex flex-col justify-between border ${
                 plan.recommended
                   ? 'border-brand-aqua border-glow-aqua lg:-translate-y-4 lg:shadow-[0_15px_40px_rgba(0,240,255,0.15)]'

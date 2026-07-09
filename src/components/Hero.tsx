@@ -28,9 +28,9 @@ export default function Hero() {
 
         {/* Main Title */}
         <motion.h1
-          initial={isMobile ? false : { opacity: 0, y: 30 }}
-          animate={isMobile ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0.01, y: isMobile ? 15 : 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: isMobile ? 0.5 : 0.8, delay: isMobile ? 0.1 : 0.4 }}
           className="font-display font-extrabold text-4xl md:text-6xl lg:text-7xl tracking-tight text-white mb-6 uppercase"
         >
           Supere Seus <br />
@@ -41,9 +41,9 @@ export default function Hero() {
 
         {/* Description */}
         <motion.p
-          initial={isMobile ? false : { opacity: 0 }}
-          animate={isMobile ? undefined : { opacity: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
+          initial={{ opacity: 0.01 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: isMobile ? 0.6 : 1, delay: isMobile ? 0.3 : 0.7 }}
           className="max-w-xl text-sm md:text-base lg:text-lg text-brand-gray-light font-normal leading-relaxed mb-10"
         >
           Treinamento personalizado para quem busca resultado, performance e uma verdadeira transformação física.
@@ -51,9 +51,9 @@ export default function Hero() {
 
         {/* Professional ID Subtext */}
         <motion.div
-          initial={isMobile ? false : { opacity: 0 }}
-          animate={isMobile ? undefined : { opacity: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
+          initial={{ opacity: 0.01 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: isMobile ? 0.6 : 1, delay: isMobile ? 0.4 : 0.9 }}
           className="mb-8 flex flex-col items-center"
         >
           <p className="font-display font-bold text-xs tracking-[0.2em] text-white uppercase">
@@ -66,9 +66,9 @@ export default function Hero() {
 
         {/* Actions CTA Buttons */}
         <motion.div
-          initial={isMobile ? false : { opacity: 0, y: 20 }}
-          animate={isMobile ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.1 }}
+          initial={{ opacity: 0.01, y: isMobile ? 15 : 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: isMobile ? 0.5 : 0.8, delay: isMobile ? 0.5 : 1.1 }}
           className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
         >
           <a
