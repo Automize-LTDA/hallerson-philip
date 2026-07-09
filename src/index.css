@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-aqua: #00f0ff;
+  --color-brand-black: #050505;
+  --color-brand-graphite: #121212;
+  --color-brand-gray-dark: #1e1e1e;
+  --color-brand-gray-light: #a0a0a5;
+  
+  --font-display: 'Orbitron', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #050505;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #050505;
+  color: #ffffff;
+}
+
+/* Custom glow utilities */
+.glow-aqua {
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+}
+
+.glow-aqua-hover:hover {
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
+  border-color: #00f0ff;
+}
+
+.text-glow-aqua {
+  text-shadow: 0 0 12px rgba(0, 240, 255, 0.6);
+}
+
+.border-glow-aqua {
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+  border-color: #00f0ff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e1e1e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff;
+}
+
+/* Hide scrollbar for gallery slider */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
