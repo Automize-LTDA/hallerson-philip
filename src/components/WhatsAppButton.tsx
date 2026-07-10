@@ -13,15 +13,13 @@ export default function WhatsAppButton() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="relative w-14 h-14 bg-brand-black border border-brand-red rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(190,22,22,0.4)] hover:shadow-[0_0_30px_rgba(190,22,22,0.7)] hover:border-white transition-all duration-300"
+        className="relative flex items-center justify-center hover:scale-110 transition-all duration-300 drop-shadow-xl hover:drop-shadow-[0_0_15px_rgba(64,195,81,0.6)]"
         aria-label="Fale comigo no WhatsApp"
       >
         <img
           src={whatsappIcon}
           alt="WhatsApp"
-          className="w-8 h-8 object-contain"
+          className="w-14 h-14 object-contain"
         />
       </motion.a>
     </div>
