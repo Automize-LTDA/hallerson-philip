@@ -49,13 +49,13 @@ export default function Objectives() {
         
         {/* Title */}
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-aqua mb-3 block">
+          <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-red mb-3 block">
             Foco & Metas
           </span>
           <h2 className="font-display font-black text-2xl md:text-4xl tracking-tight text-white uppercase">
             Objetivos de Treinamento
           </h2>
-          <div className="w-16 h-[2px] bg-brand-aqua mx-auto mt-4 glow-aqua"></div>
+          <div className="w-16 h-[2px] bg-brand-red mx-auto mt-4 glow-red"></div>
         </div>
 
         {/* Grid Layout */}
@@ -82,12 +82,12 @@ export default function Objectives() {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/60 to-brand-black/20 z-10 transition-opacity duration-300 group-hover:via-brand-black/80"></div>
               
               {/* Highlight Neon border indicator on card hover */}
-              <div className="absolute inset-0 border border-transparent group-hover:border-brand-aqua/50 rounded-xl transition-all duration-300 z-20 pointer-events-none"></div>
+              <div className="absolute inset-0 border border-transparent group-hover:border-brand-red/50 rounded-xl transition-all duration-300 z-20 pointer-events-none"></div>
 
               {/* Card Content */}
               <div className="absolute inset-0 z-25 p-8 flex flex-col justify-end">
-                <span className="w-8 h-[2px] bg-brand-aqua mb-3 transition-all duration-300 group-hover:w-16 glow-aqua"></span>
-                <h3 className="font-display font-bold text-xl uppercase tracking-wider text-white mb-2 group-hover:text-brand-aqua transition-colors duration-300">
+                <span className="w-8 h-[2px] bg-brand-red mb-3 transition-all duration-300 group-hover:w-16 glow-red"></span>
+                <h3 className="font-display font-bold text-xl uppercase tracking-wider text-white mb-2 group-hover:text-brand-red transition-colors duration-300">
                   {item.title}
                 </h3>
                 <p className="text-xs text-brand-gray-light leading-relaxed opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-20 transition-all duration-500 overflow-hidden">
@@ -119,10 +119,10 @@ export default function Objectives() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ type: 'spring', damping: 25, stiffness: 350 }}
-              className="relative z-10 max-w-md w-full bg-brand-graphite/95 border border-brand-aqua/30 rounded-2xl p-8 shadow-[0_0_50px_rgba(0,240,255,0.2)] text-center overflow-hidden"
+              className="relative z-10 max-w-md w-full bg-brand-graphite/95 border border-brand-red/30 rounded-2xl p-8 shadow-[0_0_50px_rgba(0,240,255,0.2)] text-center overflow-hidden"
             >
               {/* Decorative Corner Glow */}
-              <div className="absolute -top-12 -right-12 w-24 h-24 bg-brand-aqua/10 blur-xl rounded-full"></div>
+              <div className="absolute -top-12 -right-12 w-24 h-24 bg-brand-red/10 blur-xl rounded-full"></div>
 
               {/* Close Button */}
               <button
@@ -147,18 +147,18 @@ export default function Objectives() {
               </button>
 
               {/* Title & Tag */}
-              <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-brand-aqua mb-2 block">
+              <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-brand-red mb-2 block">
                 Treino Rápido HP
               </span>
               <h3 className="font-display font-black text-2xl tracking-tight text-white uppercase mb-2">
                 {selectedObjective}
               </h3>
               
-              <div className="w-12 h-[2px] bg-brand-aqua/40 mx-auto mb-6"></div>
+              <div className="w-12 h-[2px] bg-brand-red/40 mx-auto mb-6"></div>
 
               {/* Price Tag */}
-              <div className="bg-brand-aqua/10 border border-brand-aqua/30 text-brand-aqua font-display font-black text-lg py-2 px-6 rounded-full inline-flex items-center gap-2 mb-6 glow-aqua select-none">
-                <span className="text-xs font-semibold text-brand-aqua/75 uppercase tracking-wider">Acesso por:</span>
+              <div className="bg-brand-red/10 border border-brand-red/30 text-brand-red font-display font-black text-lg py-2 px-6 rounded-full inline-flex items-center gap-2 mb-6 glow-red select-none">
+                <span className="text-xs font-semibold text-brand-red/75 uppercase tracking-wider">Acesso por:</span>
                 R$ 15,00
               </div>
 
@@ -169,7 +169,7 @@ export default function Objectives() {
 
               {/* Security info */}
               <div className="bg-brand-black/40 border border-brand-gray-dark/40 rounded-xl p-4 text-[10px] text-gray-400 text-left flex flex-col gap-2 mb-6 select-none">
-                <div className="flex items-center gap-2 text-brand-aqua">
+                <div className="flex items-center gap-2 text-brand-red">
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   <span>Taxa única, sem mensalidades recorrentes.</span>
                 </div>
@@ -182,7 +182,7 @@ export default function Objectives() {
               {/* CTA Button */}
               <button
                 onClick={() => handlePurchaseRedirect(selectedObjective)}
-                className="w-full py-4 bg-brand-aqua text-brand-black font-extrabold uppercase tracking-wider text-xs rounded-xl hover:bg-white hover:shadow-[0_0_25px_rgba(0,240,255,0.4)] transition-all duration-300 cursor-pointer"
+                className="w-full py-4 bg-brand-red text-brand-black font-extrabold uppercase tracking-wider text-xs rounded-xl hover:bg-white hover:shadow-[0_0_25px_rgba(0,240,255,0.4)] transition-all duration-300 cursor-pointer"
               >
                 Liberar Meu Treino Rápido
               </button>

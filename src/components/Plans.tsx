@@ -21,7 +21,7 @@ export default function Plans() {
     },
     {
       name: 'Performance',
-      icon: <Flame className="text-brand-aqua" size={24} />,
+      icon: <Flame className="text-brand-red" size={24} />,
       tagline: 'Acompanhamento completo, dinâmico e focado em evolução constante.',
       features: [
         'Treino personalizado completo (Musculação + Cardio)',
@@ -36,7 +36,7 @@ export default function Plans() {
     },
     {
       name: 'Elite HP',
-      icon: <Award className="text-brand-aqua" size={24} />,
+      icon: <Award className="text-brand-red" size={24} />,
       tagline: 'Experiência premium individualizada com contato direto diário.',
       features: [
         'Todos os recursos do plano Performance',
@@ -54,20 +54,20 @@ export default function Plans() {
   return (
     <section id="planos" className="relative py-12 md:py-16 bg-brand-black border-t border-brand-gray-dark/30 overflow-hidden">
       {/* Decorative gradients */}
-      <div className="absolute top-1/4 left-0 w-80 h-80 bg-brand-aqua/5 rounded-full blur-[120px] pointer-events-none"></div>
-      <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-brand-aqua/5 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute top-1/4 left-0 w-80 h-80 bg-brand-red/5 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-brand-red/5 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Title */}
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-aqua mb-3 block">
+          <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-red mb-3 block">
             Acompanhamento
           </span>
           <h2 className="font-display font-black text-2xl md:text-4xl tracking-tight text-white uppercase">
             Planos de Acompanhamento
           </h2>
-          <div className="w-16 h-[2px] bg-brand-aqua mx-auto mt-4 glow-aqua"></div>
+          <div className="w-16 h-[2px] bg-brand-red mx-auto mt-4 glow-red"></div>
         </div>
 
         {/* Pricing Cards Grid */}
@@ -81,13 +81,13 @@ export default function Plans() {
               transition={{ duration: 0.6, delay: isMobile ? 0 : index * 0.15 }}
               className={`relative rounded-2xl bg-brand-graphite p-8 flex flex-col justify-between border ${
                 plan.recommended
-                  ? 'border-brand-aqua border-glow-aqua lg:-translate-y-4 lg:shadow-[0_15px_40px_rgba(0,240,255,0.15)]'
-                  : 'border-brand-gray-dark/70 hover:border-brand-aqua/30 shadow-[0_10px_25px_rgba(0,0,0,0.4)]'
+                  ? 'border-brand-red border-glow-red lg:-translate-y-4 lg:shadow-[0_15px_40px_rgba(0,240,255,0.15)]'
+                  : 'border-brand-gray-dark/70 hover:border-brand-red/30 shadow-[0_10px_25px_rgba(0,0,0,0.4)]'
               } transition-all duration-300 group safari-anim-fix`}
             >
               {/* Highlight Ribbon for Recommended */}
               {plan.recommended && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-brand-aqua text-brand-black text-[10px] uppercase font-black tracking-widest rounded-full shadow-lg">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-brand-red text-brand-black text-[10px] uppercase font-black tracking-widest rounded-full shadow-lg">
                   Mais Recomendado
                 </div>
               )}
@@ -98,7 +98,7 @@ export default function Plans() {
                   <span className="font-display font-black text-2xl uppercase tracking-wider text-white">
                     {plan.name}
                   </span>
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${plan.recommended ? 'bg-brand-aqua/10' : 'bg-brand-gray-dark/50'}`}>
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${plan.recommended ? 'bg-brand-red/10' : 'bg-brand-gray-dark/50'}`}>
                     {plan.icon}
                   </div>
                 </div>
@@ -115,7 +115,7 @@ export default function Plans() {
                     <li key={fIndex} className="flex items-start gap-3">
                       <Check
                         size={16}
-                        className={`mt-0.5 flex-shrink-0 ${plan.recommended ? 'text-brand-aqua' : 'text-brand-gray-light'}`}
+                        className={`mt-0.5 flex-shrink-0 ${plan.recommended ? 'text-brand-red' : 'text-brand-gray-light'}`}
                       />
                       <span className="text-xs text-gray-300 leading-relaxed">
                         {feature}
@@ -133,8 +133,8 @@ export default function Plans() {
                   rel="noopener noreferrer"
                   className={`w-full py-4 rounded-lg font-bold uppercase tracking-wider text-xs flex items-center justify-center transition-all duration-300 ${
                     plan.recommended
-                      ? 'bg-brand-aqua text-brand-black hover:bg-white hover:shadow-[0_0_20px_rgba(0,240,255,0.4)]'
-                      : 'bg-transparent text-white border border-brand-gray-dark hover:border-brand-aqua hover:bg-brand-aqua/5'
+                      ? 'bg-brand-red text-brand-black hover:bg-white hover:shadow-[0_0_20px_rgba(0,240,255,0.4)]'
+                      : 'bg-transparent text-white border border-brand-gray-dark hover:border-brand-red hover:bg-brand-red/5'
                   }`}
                 >
                   Quero Começar

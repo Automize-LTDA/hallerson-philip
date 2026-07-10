@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import heroBg from '../assets/hero_bg.jpg';
+import heroBg from '../assets/hero_bg.webp';
 
 export default function Hero() {
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
@@ -34,7 +34,7 @@ export default function Hero() {
           className="font-display font-extrabold text-4xl md:text-6xl lg:text-7xl tracking-tight text-white mb-6 uppercase"
         >
           Supere Seus <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-aqua to-cyan-400 text-glow-aqua font-black">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-cyan-400 text-glow-red font-black">
             Limites
           </span>
         </motion.h1>
@@ -59,7 +59,7 @@ export default function Hero() {
           <p className="font-display font-bold text-xs tracking-[0.2em] text-white uppercase">
             Personal Trainer
           </p>
-          <p className="text-[10px] tracking-wider text-brand-aqua/80 mt-1">
+          <p className="text-[10px] tracking-wider text-brand-red/80 mt-1">
             Performance & Transformação Corporal
           </p>
         </motion.div>
@@ -75,13 +75,13 @@ export default function Hero() {
             href="https://wa.me/558189812396?text=Ol%C3%A1%20Hallerson%2C%20conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20acompanhamento%20personalizado."
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-8 py-3.5 bg-brand-aqua text-brand-black font-bold uppercase tracking-wider text-xs rounded-lg hover:bg-white hover:shadow-[0_0_30px_rgba(0,240,255,0.5)] transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
+            className="w-full sm:w-auto px-8 py-3.5 bg-brand-red text-brand-black font-bold uppercase tracking-wider text-xs rounded-lg hover:bg-white hover:shadow-[0_0_30px_rgba(0,240,255,0.5)] transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
           >
             Começar Minha Transformação
           </a>
           <a
             href="#metodo"
-            className="w-full sm:w-auto px-8 py-3.5 bg-transparent text-white font-bold uppercase tracking-wider text-xs rounded-lg border border-brand-aqua/40 hover:border-brand-aqua hover:bg-brand-aqua/5 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
+            className="w-full sm:w-auto px-8 py-3.5 bg-transparent text-white font-bold uppercase tracking-wider text-xs rounded-lg border border-brand-red/40 hover:border-brand-red hover:bg-brand-red/5 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
           >
             Conhecer o Método
           </a>

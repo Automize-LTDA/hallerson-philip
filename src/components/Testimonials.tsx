@@ -30,19 +30,19 @@ export default function Testimonials() {
   return (
     <section id="depoimentos" className="relative py-24 bg-brand-black border-t border-brand-gray-dark/30 overflow-hidden">
       {/* Decorative details */}
-      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-brand-aqua/3 rounded-full blur-[140px] pointer-events-none"></div>
+      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-brand-red/3 rounded-full blur-[140px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Title */}
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-aqua mb-3 block">
+          <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-red mb-3 block">
             Depoimentos
           </span>
           <h2 className="font-display font-black text-2xl md:text-4xl tracking-tight text-white uppercase">
             Quem Treina Comprova
           </h2>
-          <div className="w-16 h-[2px] bg-brand-aqua mx-auto mt-4 glow-aqua"></div>
+          <div className="w-16 h-[2px] bg-brand-red mx-auto mt-4 glow-red"></div>
         </div>
 
         {/* Reviews Grid */}
@@ -54,10 +54,10 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="p-8 rounded-xl bg-brand-graphite border border-brand-gray-dark/60 hover:border-brand-aqua/30 transition-all duration-300 flex flex-col justify-between relative group"
+              className="p-8 rounded-xl bg-brand-graphite border border-brand-gray-dark/60 hover:border-brand-red/30 transition-all duration-300 flex flex-col justify-between relative group"
             >
               {/* Quote Icon overlay */}
-              <div className="absolute top-6 right-8 text-brand-aqua/10 group-hover:text-brand-aqua/20 transition-colors duration-300 pointer-events-none">
+              <div className="absolute top-6 right-8 text-brand-red/10 group-hover:text-brand-red/20 transition-colors duration-300 pointer-events-none">
                 <Quote size={40} />
               </div>
 
@@ -65,7 +65,7 @@ export default function Testimonials() {
                 {/* Rating stars */}
                 <div className="flex gap-1 mb-6">
                   {[...Array(item.rating)].map((_, i) => (
-                    <Star key={i} size={16} className="fill-brand-aqua text-brand-aqua text-glow-aqua" />
+                    <Star key={i} size={16} className="fill-brand-red text-brand-red text-glow-red" />
                   ))}
                 </div>
 
@@ -80,13 +80,13 @@ export default function Testimonials() {
                 <img
                   src={item.photo}
                   alt={`Foto de ${item.name}`}
-                  className="w-12 h-12 rounded-full object-cover object-center border border-brand-aqua/30 group-hover:border-brand-aqua transition-colors duration-300"
+                  className="w-12 h-12 rounded-full object-cover object-center border border-brand-red/30 group-hover:border-brand-red transition-colors duration-300"
                 />
                 <div>
                   <h4 className="text-white font-semibold text-sm uppercase tracking-wide">
                     {item.name}
                   </h4>
-                  <span className="text-[10px] text-brand-aqua font-medium tracking-wider uppercase block">
+                  <span className="text-[10px] text-brand-red font-medium tracking-wider uppercase block">
                     {item.objective}
                   </span>
                 </div>

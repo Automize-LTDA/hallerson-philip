@@ -13,7 +13,7 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="relative min-h-screen bg-brand-black text-white selection:bg-brand-aqua selection:text-brand-black">
+    <div className="relative min-h-screen bg-brand-black text-white selection:bg-brand-red selection:text-brand-black">
       {/* Fixed global navigation bar */}
       <Navbar />
 

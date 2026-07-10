@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logoImg from '../assets/logo.png';
+import logoImg from '../assets/logo.webp';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +51,7 @@ export default function Navbar() {
     <header
       className={`fixed top-4 left-1/2 -translate-x-1/2 w-[92%] xl:w-[85%] max-w-6xl z-50 rounded-full transition-all duration-300 border ${
         scrolled
-          ? 'bg-brand-black/90 backdrop-blur-md border-brand-aqua/20 py-2 shadow-[0_12px_40px_rgba(0,0,0,0.8)]'
+          ? 'bg-brand-black/90 backdrop-blur-md border-brand-red/20 py-2 shadow-[0_12px_40px_rgba(0,0,0,0.8)]'
           : 'bg-brand-black/40 backdrop-blur-sm border-brand-gray-dark/40 py-3'
       }`}
     >
@@ -76,14 +76,14 @@ export default function Navbar() {
               onClick={() => handleLinkClick(link.id)}
               onMouseEnter={() => setHoveredIndex(index)}
               className={`relative px-3.5 py-1.5 text-[10px] xl:text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors flex-shrink-0 group z-10 select-none ${
-                activeSection === link.id ? 'text-brand-aqua' : 'text-gray-400 hover:text-white'
+                activeSection === link.id ? 'text-brand-red' : 'text-gray-400 hover:text-white'
               }`}
             >
               <span className="relative z-10">{link.name}</span>
               {activeSection === link.id ? (
                 <motion.span
                   layoutId="activeIndicator"
-                  className="absolute bottom-0 left-3.5 right-3.5 h-[1.5px] bg-brand-aqua glow-aqua"
+                  className="absolute bottom-0 left-3.5 right-3.5 h-[1.5px] bg-brand-red glow-red"
                   transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                 />
               ) : (
@@ -91,7 +91,7 @@ export default function Navbar() {
                   {hoveredIndex === index && (
                     <motion.span
                       layoutId="hoverIndicator"
-                      className="absolute inset-0 bg-brand-aqua/10 border border-brand-aqua/10 rounded-full -z-10"
+                      className="absolute inset-0 bg-brand-red/10 border border-brand-red/10 rounded-full -z-10"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
@@ -108,9 +108,9 @@ export default function Navbar() {
         <div className="hidden xl:block flex-shrink-0">
           <a
             href="#planos"
-            className="relative px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider overflow-hidden group border border-brand-aqua/30 hover:border-brand-aqua text-white transition-colors duration-300"
+            className="relative px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider overflow-hidden group border border-brand-red/30 hover:border-brand-red text-white transition-colors duration-300"
           >
-            <span className="absolute inset-0 w-full h-full bg-brand-aqua/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            <span className="absolute inset-0 w-full h-full bg-brand-red/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             Começar Agora
           </a>
         </div>
@@ -118,7 +118,7 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="xl:hidden text-white hover:text-brand-aqua transition-colors focus:outline-none flex-shrink-0"
+          className="xl:hidden text-white hover:text-brand-red transition-colors focus:outline-none flex-shrink-0"
           aria-label="Toggle menu"
         >
           {isOpen ? <X size={20} /> : <Menu size={20} />}
@@ -141,7 +141,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => handleLinkClick(link.id)}
                 className={`text-xs uppercase tracking-widest font-bold transition-colors py-2 border-b border-brand-gray-dark/20 ${
-                  activeSection === link.id ? 'text-brand-aqua' : 'text-gray-300 hover:text-white'
+                  activeSection === link.id ? 'text-brand-red' : 'text-gray-300 hover:text-white'
                 }`}
               >
                 {link.name}
@@ -150,7 +150,7 @@ export default function Navbar() {
             <a
               href="#planos"
               onClick={() => setIsOpen(false)}
-              className="mt-2 w-full text-center py-3 bg-brand-aqua text-brand-black font-black uppercase tracking-wider text-[11px] rounded-lg hover:bg-white transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.2)]"
+              className="mt-2 w-full text-center py-3 bg-brand-red text-brand-black font-black uppercase tracking-wider text-[11px] rounded-lg hover:bg-white transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.2)]"
             >
               Começar Agora
             </a>

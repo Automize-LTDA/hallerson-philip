@@ -29,19 +29,19 @@ export default function Method() {
   return (
     <section id="metodo" className="relative py-12 md:py-16 bg-brand-black border-t border-brand-gray-dark/30">
       {/* Background decoration */}
-      <div className="absolute right-0 bottom-1/4 w-96 h-96 bg-brand-aqua/5 rounded-full blur-[130px] pointer-events-none"></div>
+      <div className="absolute right-0 bottom-1/4 w-96 h-96 bg-brand-red/5 rounded-full blur-[130px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Title */}
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-aqua mb-3 block">
+          <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-red mb-3 block">
             A Metodologia
           </span>
           <h2 className="font-display font-black text-2xl md:text-4xl tracking-tight text-white uppercase">
             Método HP
           </h2>
-          <div className="w-16 h-[2px] bg-brand-aqua mx-auto mt-4 glow-aqua"></div>
+          <div className="w-16 h-[2px] bg-brand-red mx-auto mt-4 glow-red"></div>
         </div>
 
         {/* Stages Cards Grid */}
@@ -54,19 +54,19 @@ export default function Method() {
               viewport={{ once: true, margin: "50px" }}
               transition={{ duration: 0.6, delay: isMobile ? 0 : index * 0.15 }}
               whileHover={{ y: -8, transition: { duration: 0.2 } }}
-              className="relative p-8 rounded-xl bg-brand-graphite border border-brand-gray-dark/60 transition-all duration-300 hover:border-brand-aqua/50 hover:shadow-[0_10px_30px_rgba(0,240,255,0.15)] group overflow-hidden safari-anim-fix"
+              className="relative p-8 rounded-xl bg-brand-graphite border border-brand-gray-dark/60 transition-all duration-300 hover:border-brand-red/50 hover:shadow-[0_10px_30px_rgba(0,240,255,0.15)] group overflow-hidden safari-anim-fix"
             >
               {/* Background Glow on Hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-aqua/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
 
               {/* Large Number */}
-              <div className="font-display font-black text-5xl md:text-6xl text-brand-aqua/20 group-hover:text-brand-aqua group-hover:text-glow-aqua transition-colors duration-300 mb-6">
+              <div className="font-display font-black text-5xl md:text-6xl text-brand-red/20 group-hover:text-brand-red group-hover:text-glow-red transition-colors duration-300 mb-6">
                 {stage.num}
               </div>
 
               {/* Card Title */}
               <h3 className="text-white text-lg font-bold uppercase tracking-wider mb-4 flex items-center gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-aqua group-hover:scale-150 transition-transform duration-300"></span>
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-red group-hover:scale-150 transition-transform duration-300"></span>
                 {stage.title}
               </h3>
 

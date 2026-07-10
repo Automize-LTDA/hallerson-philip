@@ -9,8 +9,8 @@ export default function CTA() {
     <section id="contato" className="relative py-14 md:py-20 bg-brand-black border-t border-brand-gray-dark/30 overflow-hidden flex items-center justify-center">
       {/* Abstract graphics - light beams and glows */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-brand-aqua/10 rounded-full blur-[140px] opacity-70"></div>
-        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-brand-aqua/5 rounded-full blur-[100px] opacity-50"></div>
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-brand-red/10 rounded-full blur-[140px] opacity-70"></div>
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-brand-red/5 rounded-full blur-[100px] opacity-50"></div>
         
         {/* Futuristic grids or lines */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,240,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(0,240,255,0.015)_1px,transparent_1px)] bg-[size:40px_40px] opacity-60"></div>
@@ -26,7 +26,7 @@ export default function CTA() {
           transition={{ duration: isMobile ? 0.3 : 0.5 }}
           className="mb-6"
         >
-          <span className="text-xs uppercase tracking-[0.3em] font-extrabold text-brand-aqua border border-brand-aqua/30 bg-brand-aqua/5 px-4 py-1.5 rounded-full">
+          <span className="text-xs uppercase tracking-[0.3em] font-extrabold text-brand-red border border-brand-red/30 bg-brand-red/5 px-4 py-1.5 rounded-full">
             Vagas Limitadas
           </span>
         </motion.div>
@@ -40,7 +40,7 @@ export default function CTA() {
           className="font-display font-black text-2xl md:text-4xl lg:text-5xl tracking-tight text-white uppercase mb-6 leading-tight"
         >
           Seu Próximo Nível <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-aqua to-cyan-400 text-glow-aqua">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-cyan-400 text-glow-red">
             Começa Agora
           </span>
         </motion.h2>
@@ -69,7 +69,7 @@ export default function CTA() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-10 py-5 bg-brand-aqua text-brand-black font-black uppercase tracking-widest text-sm rounded-lg hover:bg-white hover:shadow-[0_0_35px_rgba(0,240,255,0.6)] transition-all duration-300 block"
+            className="px-10 py-5 bg-brand-red text-brand-black font-black uppercase tracking-widest text-sm rounded-lg hover:bg-white hover:shadow-[0_0_35px_rgba(0,240,255,0.6)] transition-all duration-300 block"
           >
             Começar Minha Transformação
           </a>

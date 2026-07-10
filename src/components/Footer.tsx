@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Logo & ID */}
           <div className="md:col-span-5 flex flex-col gap-4">
             <a href="#inicio" className="font-display font-black text-2xl tracking-tighter text-white">
-              HALLERSON<span className="text-brand-aqua text-glow-aqua font-light">PHILIP</span>
+              HALLERSON<span className="text-brand-red text-glow-red font-light">PHILIP</span>
             </a>
             <p className="text-xs text-brand-gray-light max-w-xs leading-relaxed">
               Desenvolvimento de programas de treinamento físico personalizados de alta performance voltados para transformação corporal e estética de elite.
@@ -23,7 +23,7 @@ export default function Footer() {
 
           {/* Sitemap navigation links */}
           <div className="md:col-span-4 flex flex-col gap-4">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-brand-aqua">Navegação</span>
+            <span className="text-[10px] font-bold uppercase tracking-widest text-brand-red">Navegação</span>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2">
               <a href="#inicio" className="text-xs text-brand-gray-light hover:text-white transition-colors">Início</a>
               <a href="#sobre" className="text-xs text-brand-gray-light hover:text-white transition-colors">Sobre</a>
@@ -36,13 +36,13 @@ export default function Footer() {
 
           {/* Social connections */}
           <div className="md:col-span-3 flex flex-col gap-4">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-brand-aqua">Contato & Social</span>
+            <span className="text-[10px] font-bold uppercase tracking-widest text-brand-red">Contato & Social</span>
             <div className="flex gap-4">
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-brand-graphite border border-brand-gray-dark hover:border-brand-aqua text-brand-gray-light hover:text-brand-aqua flex items-center justify-center transition-all duration-300"
+                className="w-10 h-10 rounded-lg bg-brand-graphite border border-brand-gray-dark hover:border-brand-red text-brand-gray-light hover:text-brand-red flex items-center justify-center transition-all duration-300"
                 aria-label="Instagram"
               >
                 <svg
@@ -65,7 +65,7 @@ export default function Footer() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-brand-graphite border border-brand-gray-dark hover:border-brand-aqua text-brand-gray-light hover:text-brand-aqua flex items-center justify-center transition-all duration-300"
+                className="w-10 h-10 rounded-lg bg-brand-graphite border border-brand-gray-dark hover:border-brand-red text-brand-gray-light hover:text-brand-red flex items-center justify-center transition-all duration-300"
                 aria-label="WhatsApp"
               >
                 {/* SVG for WhatsApp */}
@@ -86,7 +86,7 @@ export default function Footer() {
             </div>
             <a
               href="mailto:contato@hallersonphilip.com.br"
-              className="text-xs text-brand-gray-light hover:text-brand-aqua transition-colors mt-2 block"
+              className="text-xs text-brand-gray-light hover:text-brand-red transition-colors mt-2 block"
             >
               contato@hallersonphilip.com.br
             </a>
@@ -106,14 +106,14 @@ export default function Footer() {
                 href="https://automize-one.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-brand-aqua hover:text-white transition-colors duration-300 font-semibold"
+                className="text-brand-red hover:text-white transition-colors duration-300 font-semibold"
               >
                 Automize
               </a>
             </p>
           </div>
           <div className="font-display font-black text-xs md:text-sm tracking-[0.35em] text-white/90">
-            DISCIPLINA. <span className="text-brand-aqua text-glow-aqua">PERFORMANCE.</span> EVOLUÇÃO.
+            DISCIPLINA. <span className="text-brand-red text-glow-red">PERFORMANCE.</span> EVOLUÇÃO.
           </div>
         </div>
 
