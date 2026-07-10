@@ -7,12 +7,6 @@ export default function WhatsAppButton() {
 
   return (
     <div className="fixed bottom-6 right-6 z-40">
-      {/* Outer pulsing glow ring */}
-      <motion.div
-        className="absolute inset-0 rounded-full bg-brand-red/30 pointer-events-none"
-        animate={{ scale: [1, 1.4, 1], opacity: [0.6, 0, 0.6] }}
-        transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
-      />
       
       {/* Interactive button */}
       <motion.a
