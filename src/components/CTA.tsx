@@ -40,7 +40,7 @@ export default function CTA() {
           className="font-display font-black text-2xl md:text-4xl lg:text-5xl tracking-tight text-white uppercase mb-6 leading-tight"
         >
           Seu Próximo Nível <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-cyan-400 text-glow-red">
+          <span className="text-white">
             Começa Agora
           </span>
         </motion.h2>
