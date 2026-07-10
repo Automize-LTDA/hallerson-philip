@@ -34,7 +34,7 @@ export default function Hero() {
           className="font-display font-extrabold text-4xl md:text-6xl lg:text-7xl tracking-tight text-white mb-6 uppercase"
         >
           Supere Seus <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-cyan-400 text-glow-red font-black">
+          <span className="text-white font-black">
             Limites
           </span>
         </motion.h1>
