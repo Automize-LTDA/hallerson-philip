@@ -19,7 +19,7 @@ export default function WhatsAppButton() {
         <img
           src={whatsappIcon}
           alt="WhatsApp"
-          className="w-14 h-14 object-contain"
+          className="w-12 h-12 object-contain"
         />
       </motion.a>
     </div>
