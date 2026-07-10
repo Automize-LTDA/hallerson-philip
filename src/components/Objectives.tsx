@@ -110,7 +110,7 @@ export default function Objectives() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedObjective(null)}
-              className="absolute inset-0 bg-brand-black/90 backdrop-blur-md"
+              className="absolute inset-0 bg-brand-black/95"
             />
 
             {/* Modal Card */}
@@ -118,11 +118,20 @@ export default function Objectives() {
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              transition={{ type: 'spring', damping: 25, stiffness: 350 }}
-              className="relative z-10 max-w-md w-full bg-brand-graphite/95 border border-brand-red/30 rounded-2xl p-8 shadow-[0_0_50px_rgba(0,240,255,0.2)] text-center overflow-hidden"
+              transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+              className="relative z-10 max-w-md w-full bg-brand-graphite border border-brand-red/20 rounded-2xl p-8 shadow-[0_0_40px_rgba(190,22,22,0.15)] text-center overflow-hidden safari-anim-fix"
             >
-              {/* Decorative Corner Glow */}
-              <div className="absolute -top-12 -right-12 w-24 h-24 bg-brand-red/10 blur-xl rounded-full"></div>
+              {/* Animated Background Orbs */}
+              <motion.div 
+                className="absolute -top-16 -left-16 w-32 h-32 bg-brand-red/20 rounded-full blur-[30px] pointer-events-none"
+                animate={{ scale: [1, 1.5, 1], opacity: [0.3, 0.6, 0.3] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              />
+              <motion.div 
+                className="absolute -bottom-16 -right-16 w-32 h-32 bg-brand-red/10 rounded-full blur-[30px] pointer-events-none"
+                animate={{ scale: [1.5, 1, 1.5], opacity: [0.5, 0.2, 0.5] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              />
 
               {/* Close Button */}
               <button
