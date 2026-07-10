@@ -57,11 +57,11 @@ export default function Navbar() {
     >
       <div className="px-6 md:px-8 flex items-center justify-between flex-row flex-nowrap">
         {/* Logo */}
-        <a href="#inicio" className="flex items-center gap-2 group flex-shrink-0">
+        <a href="#inicio" className="absolute left-1/2 -translate-x-1/2 xl:static xl:translate-x-0 flex items-center gap-2 group flex-shrink-0">
           <img
             src={logoImg}
             alt="Hallerson Philip"
-            className="h-12 md:h-14 xl:h-16 w-auto object-contain transition-all duration-300 group-hover:scale-[1.02]"
+            className="h-16 md:h-20 xl:h-16 w-auto object-contain transition-all duration-300 group-hover:scale-[1.02]"
           />
         </a>
 
@@ -118,7 +118,7 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="xl:hidden text-white hover:text-brand-red transition-colors focus:outline-none flex-shrink-0"
+          className="xl:hidden ml-auto text-white hover:text-brand-red transition-colors focus:outline-none flex-shrink-0"
           aria-label="Toggle menu"
         >
           {isOpen ? <X size={20} /> : <Menu size={20} />}
